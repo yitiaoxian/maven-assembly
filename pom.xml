@@ -28,6 +28,23 @@
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.0.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <!--jar的主类设置-->
+                        <mainClass>xiao.Hello</mainClass>
+                        <!--是否创建一个Class-Path清单条目。默认值是false-->
+                        <addClasspath>true</addClasspath>
+                        <!--依赖jar路径-->
+                        <classpathPrefix>lib/</classpathPrefix>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
             <version>3.1.0</version>
             <configuration>
@@ -35,11 +52,6 @@
                 <descriptors>
                     <descriptor>src/assembly/package.xml</descriptor>
                 </descriptors>
-                <archive>
-                    <manifest>
-                        <mainClass>xiao.Hello</mainClass>
-                    </manifest>
-                </archive>
             </configuration>
             <executions>
                 <execution>
