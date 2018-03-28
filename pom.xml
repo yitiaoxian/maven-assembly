@@ -38,7 +38,7 @@
                         <!--是否创建一个Class-Path清单条目。默认值是false-->
                         <addClasspath>true</addClasspath>
                         <!--依赖jar路径-->
-                        <classpathPrefix>lib/</classpathPrefix>
+                        <classpathPrefix>../lib/</classpathPrefix>
                     </manifest>
                 </archive>
             </configuration>
