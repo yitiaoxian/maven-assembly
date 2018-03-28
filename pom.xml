@@ -7,6 +7,11 @@
     <groupId>xiao</groupId>
     <artifactId>test</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <pdfbox.version>2.0.8</pdfbox.version>
+        <jempbox.version>1.8.13</jempbox.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -22,6 +27,21 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>1.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>${pdfbox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox-tools</artifactId>
+            <version>${pdfbox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>jempbox</artifactId>
+            <version>${jempbox.version}</version>
         </dependency>
     </dependencies>
 <build>
@@ -62,6 +82,14 @@
                     </goals>
                 </execution>
             </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
         </plugin>
     </plugins>
 </build>
