@@ -49,9 +49,6 @@
             <useProjectArtifact>true</useProjectArtifact>
             <unpack>false</unpack>
             <scope>runtime</scope>
-            <excludes>
-                <exclude>xiao:test:jar:1.0-SNAPSHOT</exclude>
-            </excludes>
             <outputDirectory>/lib</outputDirectory>
         </dependencySet>
     </dependencySets>

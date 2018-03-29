@@ -42,6 +42,7 @@ public final class ExtractEmbeddedFiles{
             document = PDDocument.load(new File("E:\\tika-test-dir\\test\\wps嵌套\\wps的pdf（压缩和图片）.pdf"));
             PDDocumentNameDictionary namesDictionary =
                     new PDDocumentNameDictionary( document.getDocumentCatalog() );
+
             PDEmbeddedFilesNameTreeNode efTree = namesDictionary.getEmbeddedFiles();
             if (efTree != null)
             {

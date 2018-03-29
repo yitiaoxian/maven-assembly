@@ -49,6 +49,7 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
+            <!--最好使用3.0.2版本，3.0.0的外部依赖jar包在class-path路径清单中有问题！！！-->
             <version>3.0.2</version>
             <configuration>
                 <archive>
